@@ -19,7 +19,7 @@
 //  <p>No server created</p>
 //</ng-template>
 
-//Attribute directives dont adsd or remove elements, they only change the element they
+//Attribute directives dont add or remove elements, they only change the element they
 //are placed on.
 //>p [ngStyle]="{backgroundColor: getColor()}">
 
