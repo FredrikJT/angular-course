@@ -20,7 +20,7 @@
       <button (click)="onClick()">
         Display details
       </button>
-      <p>{{ secretMessage }}</p>
+      <p *ngIf="showSecret">{{ secretMessage }}</p>
       <li *ngFor="let click of clicks; index as i"
         [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : '' }"
         [ngClass]="{ whiteText: i >= 5}">
