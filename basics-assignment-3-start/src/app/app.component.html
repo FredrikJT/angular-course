@@ -21,8 +21,11 @@
         Display details
       </button>
       <p>{{ secretMessage }}</p>
-      <li [ngStyle]="{backgroundColor: getColor()}" *ngFor="let click of clicks" >{{ click }} </li>
-
+      <li *ngFor="let click of clicks; index as i"
+        [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : '' }"
+        [ngClass]="{ whiteText: i >= 5}">
+        {{ click }}
+      </li>
     </div>
   </div>
 </div>
