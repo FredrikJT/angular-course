@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12"><h3>This is the root app component. Here all jokers create jokes so that we have something to output through the joke component.</h3></div>
+    <div class="col-xs-12">By writing [joke]="jokeElement" we give the joke component a jokeElement which is created in the root component.</div>
+    <div class="col-xs-12">The [joke]="jokeElement" is called property binding because we bind the local property jokeElement to the Input named joke</div>
+    <div class="col-xs-12">
+      <app-joke-rules
+      *ngFor="let jokeElement of jokeElements"
+      [joke]="jokeElement"></app-joke-rules>
+    </div>
+  </div>
+</div>
+
+<app-add-new-joke (jokeAdded)="onJokeAdded($event)"></app-add-new-joke>

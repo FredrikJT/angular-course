@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="xs-col-12">
+      <button class="btn btn-primary"
+      (click)="addJoke(jokeInput.value, nameInput.value, lengthInput.value)">
+        Add joke
+      </button>
+      <div class="col-sm-5 formGroup">
+          <label for="name">Name</label>
+          <input #nameInput
+          type="text" id="name" class="form-control">
+      </div>
+      <div class="col-sm-5 formGroup">
+          <label for="length">Length</label>
+          <input #lengthInput
+          type="text" id="length" class="form-control">
+      </div>
+      <div class="col-sm-5 formGroup">
+        <label for="theJoke">The joke</label>
+        <input #jokeInput
+        type="text" id="theJoke" class="form-control">
+      </div>
+    </div>
+  </div>
+</div>
+
