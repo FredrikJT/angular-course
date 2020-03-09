@@ -28,3 +28,31 @@
 getColor() {
     return this.serverStatus === 'online' ? 'green' : 'red';
 }
+
+//LOCAL REFERENCE: A reference to an element in a HTML file. 73
+// <input
+// type="text"
+// #inputEl>
+
+// <p>inputEl.value</p>
+
+
+//VIEWCHILD: Access a local element REFERENCE in the TS file. 75
+//To access inputEl in the TS file for that component, write:
+//@Viewchild('inputEl') inputElName;
+//Now you can access inputElName
+//äDo not edit the DOM through the Viewchild representation of an element. use e.g. property binding instead.
+
+//NG-CONTENT: Access data from inside the closing tags of a component reference.
+//Parent component:
+    // <app-data-component
+        // <p>dataElement.value</p>
+        // >
+    // </app-data-component>
+//Child component:
+//<div>
+    //<ng-content></ng-content>
+//</div>
+
+
+//CONTENTCHILD:...
