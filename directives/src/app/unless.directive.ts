@@ -2,6 +2,7 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Directive({
+  //Using the [] brackets tells us that this is an attribute selector
   selector: '[appUnless]'
 })
 export class UnlessDirective {
