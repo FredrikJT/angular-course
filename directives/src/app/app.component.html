@@ -1,6 +1,8 @@
 <div class="container">
+  <h3>Not so good directive</h3>
   <p appBasicHighlight>Styled in a not so good way because something about you shouldn't change properties<br>
   directly on the DOM?</p>
+  <h3>Better styled directive using HostListener and HostBinding</h3>
   <p appBetterHighlight>Styled in a better way!<br>
     Here we use the renderer to change the element and not the DOM.<br>
   As well as using a HostListener for mouseenter and mouseleave in <br>
@@ -9,11 +11,20 @@ order to change the syle when hovering the element!</p>
     This works just as well as the one above but uses a bit less code.</p>
   <br>
 
+  <h3>Custom structural directive</h3>
   <p>hideStructuralDirective is now {{ hideStructuralDirective }}</p>
   <button class="btn btn-primary" (click)="hideStructuralDirective = !hideStructuralDirective">Click me to show a custom structural directive</button>
   <div *appUnless="hideStructuralDirective">
     <p>A structural directive is kind of like a method that you call with a star in angular.<br>
     The most common are *ngIf and *ngFor. Here we have created our own structural directive called *appUnless!
     </p>
+  </div>
+
+  <h3>*ngSwitch</h3>
+  <button (click)="value = 5">Set value to 5</button>
+  <button (click)="value = null">Set value to nothing</button>
+  <div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Value is 5</p>
+    <p *ngSwitchDefault>Value is default</p>
   </div>
 </div>

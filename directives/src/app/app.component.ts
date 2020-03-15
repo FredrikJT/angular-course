@@ -8,11 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AppComponent {
   hideStructuralDirective = true;
   title = 'directives';
-
-  // ngOnInit() {
-  //   this.clicked = false;
-
-  // }
-
+  value;
 
 }
