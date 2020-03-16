@@ -56,3 +56,15 @@ getColor() {
 
 
 //CONTENTCHILD:...
+
+//INJECTING SERVICE INTO COMPONENTS: Steps to inject service into component. 107
+/*
+IN THE SERVICE
+1. A service is an ordinary class which you export in hte typical manner.
+
+IN THE COMPONENT
+1. import LoggingService
+2. Set it as a provider in the Component decorator
+3. Initialize the loggingService by setting it in the constructor
+4. Access the serivce with this.loggingService
+*/
