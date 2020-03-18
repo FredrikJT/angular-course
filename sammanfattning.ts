@@ -68,3 +68,15 @@ IN THE COMPONENT
 3. Initialize the loggingService by setting it in the constructor
 4. Access the serivce with this.loggingService
 */
+
+// INJECTING SERVICES INTO SERVICES. 111
+// In ordet to use a service in another service, you need to use @Injectable on the service in which you want to use another service.
+//The reason to why we need to use @Injectable is because the pace where we want to use the service
+//need to have some meta data. E.g. @Component and @Directive has meta data.
+/*
+import {LoggingService} from '...'
+@Injectable()
+export class AccountService {
+    constructor(private loggingService: LoggingService){}
+}
+*/
