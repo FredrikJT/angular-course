@@ -7,13 +7,13 @@ export class UsersService {
   activeUsers = ['Max', 'Anna'];
   inactiveUsers = ['Chris', 'Manu'];
 
-  // activeUsersUpdated = new EventEmitter<string[]>();
+  setToActive(id: number) {
+    this.activeUsers.push(this.inactiveUsers[id]);
+    this.inactiveUsers.splice(id, 1);
+  }
 
-  // TODO: Manage user arrays globally
-
-  // constructor() {
-  //   this.activeUsersUpdated.emit(this.activeUsers);
-  // }
-
-  // TODO: Switch users between active and inactive
+  setToInactive(id: number) {
+    this.inactiveUsers.push(this.activeUsers[id]);
+    this.activeUsers.splice(id, 1);
+  }
 }
