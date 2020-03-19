@@ -1,10 +1,15 @@
-import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
 export class CounterService {
-  // TODO: counts the number of active->inactive and inactive->active actions
+  activeToInactive = 0;
+  inactiveToActive = 0;
 
-  constructor() { }
+  incrementActiveToInactive() {
+    this.activeToInactive++;
+    console.log(`Active to inactive: ${this.activeToInactive}`);
+  }
+
+  incrementInactiveToActive() {
+    this.inactiveToActive++;
+    console.log(`Inactive to Active: ${this.inactiveToActive}`);
+  }
+
 }
