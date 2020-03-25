@@ -34,6 +34,17 @@ export class EditServerComponent implements OnInit {
     this.changesSaved = true;
     this.router.navigate(['../'], {relativeTo: this.route});
   }
+
+  canDeactivate(): Observable<boolean> | Promise<boolean> | boolean {
+    if (!this.allowEdit) {
+      return true;
+    }
+    if ((this.serverName !== this.server.name || this.serverStatus !== this.server.status) &&
+        !this.changesSaved) {
+          return confirm('Do tou want to discard the changes?');
+    } else {
+      return true;
+    }
   }
 
 }
