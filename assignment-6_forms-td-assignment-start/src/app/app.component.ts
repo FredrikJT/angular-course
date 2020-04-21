@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  onSubmit() {
-    console.log('submitted');
+  onSubmit(form: HTMLFormElement) {
+    console.log(form);
   }
 
 }
