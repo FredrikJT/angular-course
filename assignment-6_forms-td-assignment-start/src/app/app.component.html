@@ -25,14 +25,14 @@
             required
             email
             #email="ngModel">
-            <span class="help-block" *ngIf="!email.valid && email.touched"> Please enter a valid email</span>
+            <span class="help-block" *ngIf="!email.valid"> Please enter a valid email</span>
         </div>
         <div class="form-group">
           <label for="subscription">Subscription</label>
           <select
             id="subscription"
             class="form-control"
-            ngModel
+            [ngModel]="defaultSubscription"
             name="subscription">
             <option value="basic">Basic</option>
             <option value="advanced">Advanced</option>
@@ -47,7 +47,9 @@
             class="form-control"
             ngModel
             name="password"
-            required>
+            required
+            #password="ngModel">
+            <span class="help-block" *ngIf="password.invalid">Password not enetered correctly</span>
         </div>
         <button
           class="btn btn-primary"
@@ -56,6 +58,7 @@
           submit
         </button>
       </form>
+      <span class="warning" *ngIf="f.invalid && f.touched">Form is not filled correctly!</span>
     </div>
   </div>
 </div>
